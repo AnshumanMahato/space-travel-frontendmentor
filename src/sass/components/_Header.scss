@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+hr {
+    width: 50%;
+}
+
+.nav {
+    letter-spacing: 2.7;
+    width: 50%;
+    padding: 4rem 12rem;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+
+    }
+}
