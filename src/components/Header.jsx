@@ -16,7 +16,7 @@ const Header = () => {
           </li>
           <li className="nav__item">
             <a className="nav__link" href="/">
-              <span>01</span>&nbsp;&nbsp;DESTINATIONS
+              <span>01</span>&nbsp;&nbsp;DESTINATION
             </a>
           </li>
           <li className="nav__item">
