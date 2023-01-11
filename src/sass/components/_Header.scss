@@ -5,14 +5,21 @@ header {
     align-items: center;
 }
 
+.logo {
+    margin: 6rem;
+}
+
 hr {
-    width: 50%;
+    flex-grow: 1;
+    margin-right: -3rem;
+    z-index: 1;
+    opacity: 0.3;
 }
 
 .nav {
-    letter-spacing: 2.7;
-    width: 50%;
-    padding: 4rem 12rem;
+    padding: 4rem 16rem 4rem 12rem;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40px);
 
     &__list {
         list-style: none;
@@ -20,7 +27,20 @@ hr {
         justify-content: space-between;
     }
 
+    &__item {
+        margin-right: 4rem;
+
+        &:last-child {
+            margin-right: 2rem;
+        }
+    }
+
     &__link {
+        letter-spacing: 2.7px;
+
+        span {
+            font-weight: bold;
+        }
 
         &:link,
         &:visited {

@@ -11,8 +11,6 @@ function App() {
   return (
     <div style={background}>
       <Header />
-      <main>Welcome</main>
-      <footer>Goodbye</footer>
     </div>
   );
 }
