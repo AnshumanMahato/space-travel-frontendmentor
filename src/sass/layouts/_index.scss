@@ -19,6 +19,7 @@
     position: absolute;
     top: 33rem;
     right: 15rem;
+    transform-style: preserve-3d;
     display: flex;
     height: 27rem;
     width: 27rem;
@@ -32,4 +33,20 @@
     font-size: 3.2rem;
     letter-spacing: 2px;
     color: $color-black;
+
+    &::after {
+        position: absolute;
+        transform: translateZ(-1px);
+        content: '';
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: inherit;
+        transition: all .3s;
+    }
+
+    &:hover::after {
+        width: 160%;
+        height: 160%;
+    }
 }
