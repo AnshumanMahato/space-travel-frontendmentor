@@ -10,8 +10,26 @@
 
     p {
         font-size: 1.8rem;
-        // text-align: justi;
         line-height: 3rem;
         color: $color-secondary;
     }
+}
+
+.hero-btn {
+    position: absolute;
+    top: 33rem;
+    right: 15rem;
+    display: flex;
+    height: 27rem;
+    width: 27rem;
+    background-color: #fff;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-family: 'Bellefair', serif;
+    font-size: 3.2rem;
+    letter-spacing: 2px;
+    color: $color-black;
 }

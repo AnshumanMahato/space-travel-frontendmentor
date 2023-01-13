@@ -13,6 +13,9 @@ const Home = () => {
           experience!
         </p>
       </div>
+      <a href="/" className="hero-btn">
+        EXPLORE
+      </a>
     </main>
   );
 };
