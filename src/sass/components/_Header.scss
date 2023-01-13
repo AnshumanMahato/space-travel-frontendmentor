@@ -17,7 +17,7 @@ hr {
 }
 
 .nav {
-    padding: 4rem 16rem 4rem 12rem;
+    padding: 0 16rem 0 12rem;
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40px);
     font-family: 'Barlow Condensed', sans-serif;
@@ -30,10 +30,21 @@ hr {
 
     &__item {
         margin-right: 4rem;
+        padding: 4rem 0;
+        border-bottom: 3px solid transparent;
 
         &:last-child {
             margin-right: 2rem;
         }
+
+        &:hover {
+            border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+        }
+
+        &.active {
+            border-bottom: 3px solid rgba(255, 255, 255);
+        }
+
     }
 
     &__link {
@@ -49,5 +60,9 @@ hr {
             color: inherit;
         }
 
+    }
+
+    &__link:active &__item {
+        border-bottom: 3px solid rgb(255, 255, 255);
     }
 }

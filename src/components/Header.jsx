@@ -9,7 +9,7 @@ const Header = () => {
       <hr />
       <nav className="nav">
         <ul className="nav__list">
-          <li className="nav__item">
+          <li className="nav__item active">
             <a className="nav__link" href="/">
               <span>00</span>&nbsp;&nbsp;HOME
             </a>
@@ -31,6 +31,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <input type="checkbox" name="check" id="check" />
     </header>
   );
 };
