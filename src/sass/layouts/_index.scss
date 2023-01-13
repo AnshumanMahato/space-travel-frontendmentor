@@ -1,9 +1,17 @@
+.home {
+    position: relative;
+}
+
 .hero-text {
     width: min-content;
+    position: absolute;
+    top: 23rem;
+    left: 16rem;
 
     p {
-        font-size: 2rem;
-        text-align: justify;
+        font-size: 1.8rem;
+        // text-align: justi;
         line-height: 3rem;
+        color: $color-secondary;
     }
 }

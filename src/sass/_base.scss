@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
 
 *,
 *::after,
@@ -15,7 +15,7 @@ html {
 
 body {
     overflow-x: hidden;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 1.6rem;
     color: $color-primary;
 }
