@@ -1,5 +1,29 @@
+.background {
+    min-height: 100vh;
+    max-width: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &-home {
+        background-image: url("../../../public/assets/home/background-home-desktop.jpg");
+    }
+
+    &-destination {
+        background-image: url("../../../public/assets/destination/background-destination-desktop.jpg");
+    }
+
+    &-crew {
+        background-image: url("../../../public/assets/crew/background-crew-desktop.jpg");
+    }
+
+    &-technology {
+        background-image: url("../../../public/assets/technology/background-technology-desktop.jpg");
+    }
+}
+
 .home {
     position: relative;
+    height: fit-content;
 }
 
 .hero-text {

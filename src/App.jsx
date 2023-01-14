@@ -1,18 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-
-const background = {
-  backgroundImage: `url("/assets/home/background-home-desktop.jpg")`,
-  maxWidth: "100vw",
-  minHeight: "100vh",
-};
+import Destination from "./pages/Destination";
+import Crew from "./pages/Crew";
+import Technology from "./pages/Technology";
 
 function App() {
+  const [page, setPage] = useState("home");
+
+  const background = {
+    backgroundImage: `url("/assets/${page}/background-${page}-desktop.jpg")`,
+  };
+
+  const navigator = (link) => setPage(link);
+  const renderPage = () => {
+    switch (page) {
+      case "home":
+        return <Home />;
+      case "destination":
+        return <Destination />;
+      case "crew":
+        return <Crew />;
+      case "technology":
+        return <Technology />;
+      default:
+    }
+  };
+
   return (
-    <div style={background}>
-      <Header />
-      <Home />
+    <div className={`background background-${page}`}>
+      <Header navigator={navigator} />
+      {renderPage()}
     </div>
   );
 }
