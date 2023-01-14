@@ -8,10 +8,6 @@ import Technology from "./pages/Technology";
 function App() {
   const [page, setPage] = useState("home");
 
-  const background = {
-    backgroundImage: `url("/assets/${page}/background-${page}-desktop.jpg")`,
-  };
-
   const navigator = (link) => setPage(link);
   const renderPage = () => {
     switch (page) {

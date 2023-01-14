@@ -1,5 +1,7 @@
 import React from "react";
 
-const Technology = () => {};
+const Technology = () => {
+  return <div>Hello</div>;
+};
 
 export default Technology;
