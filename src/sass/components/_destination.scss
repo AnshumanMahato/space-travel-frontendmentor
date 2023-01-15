@@ -1,0 +1,35 @@
+.destination {
+    display: grid;
+    width: 100%;
+    grid-template-columns: [image-start] 1fr [image-end desc-start] 1fr[desc-end];
+    grid-template-rows: [nav-start]min-content[nav-end desc-start] auto [desc-end];
+
+    &__img {
+        grid-row: nav-start/desc-end;
+        grid-column: image-start/image-end;
+    }
+
+    &__nav {
+        grid-row: nav-start/nav-end;
+        grid-column: desc-start/desc-end;
+
+        &list {
+            list-style: none;
+            display: flex;
+        }
+
+        &item {
+            margin-right: 4rem;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    }
+
+    &__data {
+        display: flex;
+    }
+}

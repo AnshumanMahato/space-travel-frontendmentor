@@ -3,6 +3,7 @@ header {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    color: $color-primary;
 }
 
 .logo {
@@ -20,7 +21,6 @@ hr {
     padding: 0 16rem 0 12rem;
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40px);
-    font-family: 'Barlow Condensed', sans-serif;
 
     &__list {
         list-style: none;
@@ -49,7 +49,6 @@ hr {
     }
 
     &__link {
-        letter-spacing: 2.7px;
 
         span {
             font-weight: bold;

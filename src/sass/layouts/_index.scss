@@ -31,12 +31,6 @@
     position: absolute;
     top: 23rem;
     left: 16rem;
-
-    p {
-        font-size: 1.8rem;
-        line-height: 3rem;
-        color: $color-secondary;
-    }
 }
 
 .hero-btn {
@@ -73,4 +67,8 @@
         width: 160%;
         height: 160%;
     }
+}
+
+.page {
+    margin: 2% 12%;
 }
