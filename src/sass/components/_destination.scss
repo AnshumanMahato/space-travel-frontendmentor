@@ -1,8 +1,9 @@
 .destination {
+    margin: 5% 0;
     display: grid;
     width: 100%;
     grid-template-columns: [image-start] 1fr [image-end desc-start] 1fr[desc-end];
-    grid-template-rows: [nav-start]min-content[nav-end desc-start] auto [desc-end];
+    grid-template-rows: [nav-start] auto [nav-end desc-start] 1fr [desc-end];
 
     &__img {
         grid-row: nav-start/desc-end;
@@ -12,6 +13,7 @@
     &__nav {
         grid-row: nav-start/nav-end;
         grid-column: desc-start/desc-end;
+        margin-bottom: 5rem;
 
         &list {
             list-style: none;
@@ -26,10 +28,21 @@
     &__description {
         display: flex;
         flex-direction: column;
-        justify-content: space-between
+        width: 80%;
+    }
+
+    &__name {
+        margin: 5rem 0;
     }
 
     &__data {
         display: flex;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
 }
