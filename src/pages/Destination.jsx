@@ -4,7 +4,7 @@ const Destinations = () => {
   return (
     <main className="page">
       <h5 className="page-header heading-5">
-        <span>01</span>&nbsp;&nbsp;DESTINATION
+        <span>01</span>&nbsp;&nbsp;PICK YOUR DESTINATION
       </h5>
       <div className="destination">
         <nav className="destination__nav">
