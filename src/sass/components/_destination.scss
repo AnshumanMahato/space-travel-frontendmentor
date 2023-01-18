@@ -12,6 +12,12 @@
         display: flex;
         padding: 0 4rem;
         align-items: center;
+        opacity: 0;
+        transition: opacity 0.2s;
+
+        &.active {
+            opacity: 1;
+        }
     }
 
     &__nav {
@@ -26,16 +32,35 @@
         &item {
             margin-right: 4rem;
             padding-bottom: 1rem;
-            border-bottom: 3px solid #fff;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+
+            &:hover {
+                border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+            }
+
+            &.active {
+                color: #fff;
+                border-bottom: 3px solid rgba(255, 255, 255);
+            }
         }
     }
 
     &__description {
+        grid-row: desc-start/desc-end;
+        grid-column: desc-start/desc-end;
+
         display: flex;
         flex-direction: column;
+        opacity: 0;
+        transition: opacity 0.2s;
 
         &>* {
             margin: 3rem 0;
+        }
+
+        &.active {
+            opacity: 1;
         }
     }
 

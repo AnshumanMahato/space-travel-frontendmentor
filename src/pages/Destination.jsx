@@ -1,42 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
+import DestDescription from "../components/DestDescription";
+import DestImage from "../components/DestImage";
+import { destinations } from "../data";
 
 const Destinations = () => {
+  let [destination, setDest] = useState("Moon");
+
+  const handleClick = (e) => {
+    const { dest } = e.target.dataset;
+    setDest(dest);
+  };
+
   return (
     <main className="page">
-      <h5 className="page-header heading-5">
+      <h5 className="page-heading heading-5">
         <span>01</span>&nbsp;&nbsp;PICK YOUR DESTINATION
       </h5>
       <div className="destination">
         <nav className="destination__nav">
           <ul className="destination__navlist">
-            <li className="destination__navitem">MOON</li>
-            <li className="destination__navitem">MARS</li>
-            <li className="destination__navitem">EUROPA</li>
-            <li className="destination__navitem">TITAN</li>
+            <li
+              className={`destination__navitem ${
+                destination === "Moon" ? "active" : ""
+              }`}
+              data-dest="Moon"
+              onClick={handleClick}
+            >
+              MOON
+            </li>
+            <li
+              className={`destination__navitem ${
+                destination === "Mars" ? "active" : ""
+              }`}
+              data-dest="Mars"
+              onClick={handleClick}
+            >
+              MARS
+            </li>
+            <li
+              className={`destination__navitem ${
+                destination === "Europa" ? "active" : ""
+              }`}
+              data-dest="Europa"
+              onClick={handleClick}
+            >
+              EUROPA
+            </li>
+            <li
+              className={`destination__navitem ${
+                destination === "Titan" ? "active" : ""
+              }`}
+              data-dest="Titan"
+              onClick={handleClick}
+            >
+              TITAN
+            </li>
           </ul>
         </nav>
-        <div className="destination__img">
-          <img src="/assets/destination/image-moon.webp" alt="moon" />
-        </div>
-        <div className="destination__description">
-          <h2 className="destination__name heading-2">MOON</h2>
-          <p className="destination__about">
-            See our planet as you’ve never seen it before. A perfect relaxing
-            trip away to help regain perspective and come back refreshed. While
-            you’re there, take in some history by visiting the Luna 2 and Apollo
-            11 landing sites.
-          </p>
-          <div className="destination__data">
-            <div className="destination__distance">
-              <span className="subheading-2">AVG. DISTANCE</span>
-              <span className="subheading-1">384,400 KM</span>
-            </div>
-            <div className="destination__time">
-              <span className="subheading-2">EST. TRAVEL TIME</span>
-              <span className="subheading-1">3 DAYS</span>
-            </div>
-          </div>
-        </div>
+
+        {destinations.map((dest) => (
+          <DestImage
+            name={dest.name}
+            path={dest.images.webp.slice(1)}
+            active={dest.name === destination}
+          />
+        ))}
+
+        {destinations.map((dest) => (
+          <DestDescription
+            name={dest.name}
+            description={dest.description}
+            distance={dest.distance}
+            travel={dest.travel}
+            active={dest.name === destination}
+          />
+        ))}
       </div>
     </main>
   );
