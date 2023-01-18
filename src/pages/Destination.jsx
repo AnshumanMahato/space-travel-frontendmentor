@@ -58,16 +58,18 @@ const Destinations = () => {
           </ul>
         </nav>
 
-        {destinations.map((dest) => (
+        {destinations.map((dest, key) => (
           <DestImage
+            key={key}
             name={dest.name}
             path={dest.images.webp.slice(1)}
             active={dest.name === destination}
           />
         ))}
 
-        {destinations.map((dest) => (
+        {destinations.map((dest, key) => (
           <DestDescription
+            key={key}
             name={dest.name}
             description={dest.description}
             distance={dest.distance}
