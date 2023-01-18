@@ -1,33 +1,23 @@
-import React, { useState } from "react";
-import Header from "./components/Header";
+import React from "react";
+import { useLocation, BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 
 function App() {
-  const [page, setPage] = useState("home");
-
-  const navigator = (link) => setPage(link);
-  const renderPage = () => {
-    switch (page) {
-      case "home":
-        return <Home />;
-      case "destination":
-        return <Destination />;
-      case "crew":
-        return <Crew />;
-      case "technology":
-        return <Technology />;
-      default:
-    }
-  };
-
   return (
-    <div className={`background background-${page}`}>
-      <Header navigator={navigator} />
-      {renderPage()}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="destination" element={<Destination />} />
+          <Route path="crew" element={<Crew />} />
+          <Route path="technology" element={<Technology />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
