@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import CrewDescription from "../components/CrewDescription";
+import CrewImage from "../components/CrewImage";
 import { crew } from "../data";
 
-const test = crew[0];
-
 const Crew = () => {
+  const [currCrew, setCrew] = useState(2);
+
+  const handleClick = (e) => {
+    if (!e.target.classList.contains("control__btn")) return;
+    const currKey = Number(e.target.dataset.key);
+    setCrew(currKey);
+  };
+
   return (
     <main className="page">
       <h5 className="page-heading heading-5">
@@ -11,19 +19,37 @@ const Crew = () => {
       </h5>
 
       <div className="crew">
-        <div className="crew__description">
-          <h4 className="heading-4 crew__role">{test.role}</h4>
-          <h3 className="heading-3 crew__name">{test.name}</h3>
-          <p className="crew__about">{test.bio}</p>
-        </div>
-        <div className="crew__image">
-          <img src={test.images.png} alt={test.name} />
-        </div>
-        <div className="control">
-          <button className="control__btn active"></button>
-          <button className="control__btn"></button>
-          <button className="control__btn"></button>
-          <button className="control__btn"></button>
+        {crew.map((crewMember, key) => (
+          <CrewDescription
+            crewMember={crewMember}
+            key={key}
+            active={currCrew === key}
+          />
+        ))}
+        {crew.map((crewMember, key) => (
+          <CrewImage
+            key={key}
+            crewMember={crewMember}
+            active={currCrew === key}
+          />
+        ))}
+        <div className="control" onClick={handleClick}>
+          <button
+            className={`control__btn ${currCrew === 0 ? "active" : ""}`}
+            data-key="0"
+          ></button>
+          <button
+            className={`control__btn ${currCrew === 1 ? "active" : ""}`}
+            data-key="1"
+          ></button>
+          <button
+            className={`control__btn ${currCrew === 2 ? "active" : ""}`}
+            data-key="2"
+          ></button>
+          <button
+            className={`control__btn ${currCrew === 3 ? "active" : ""}`}
+            data-key="3"
+          ></button>
         </div>
       </div>
     </main>

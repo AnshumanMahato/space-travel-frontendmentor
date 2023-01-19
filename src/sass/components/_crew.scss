@@ -2,25 +2,40 @@
     display: grid;
     width: 100%;
     flex-grow: 1;
-    grid-template-columns: [desc-start] min-content [desc-end img-start] min-content[img-end];
-    grid-template-rows: [desc-start] 1fr [desc-end control-start] max-content [control-end];
-    gap: 5%;
+    grid-template-columns: [desc-start] minmax(min-content, 1fr) [desc-end img-start] 1fr[img-end];
+    grid-template-rows: [desc-start] max-content [desc-end control-start] auto [control-end];
+    // gap: 0 5%;
 
     &__description {
         grid-column: desc-start/desc-end;
         grid-row: desc-start/desc-end;
-        margin: 30% 0 0;
+        margin: 15rem 0 0;
+        opacity: 0;
+        display: none;
+        transition: opacity 0.2s;
+
+        &.active {
+            opacity: 1;
+            display: block;
+        }
     }
 
     &__image {
         grid-column: img-start/img-end;
         grid-row: desc-start/control-end;
         position: relative;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.2s;
+        opacity: 0;
+
+        &.active {
+            opacity: 1;
+        }
 
         img {
             position: absolute;
-            top: -2rem;
-            left: 7.5rem;
+            bottom: 0;
         }
     }
 
@@ -35,13 +50,13 @@
     }
 
     &__about {
-        width: 90%;
+        width: 45rem;
     }
 
     .control {
         display: flex;
         align-items: center;
-        margin: 0 0 18%;
+        margin: auto 0 10rem;
 
         &__btn {
             width: 2rem;
@@ -49,8 +64,14 @@
             border-radius: 50%;
             background-color: #fff;
             margin-right: 2rem;
+            cursor: pointer;
             content: '';
             opacity: 0.2;
+            transition: opacity 0.2s;
+
+            &:hover {
+                opacity: 0.5;
+            }
 
             &.active {
                 opacity: 1;

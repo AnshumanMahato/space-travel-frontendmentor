@@ -1,6 +1,6 @@
 .background {
     max-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
@@ -11,15 +11,15 @@
     }
 
     &-destination {
-        background-image: url("../../../public/assets/destination/background-destination-desktop.jpg");
+        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../../public/assets/destination/background-destination-desktop.jpg");
     }
 
     &-crew {
-        background-image: url("../../../public/assets/crew/background-crew-desktop.jpg");
+        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../../public/assets/crew/background-crew-desktop.jpg");
     }
 
     &-technology {
-        background-image: url("../../../public/assets/technology/background-technology-desktop.jpg");
+        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../../public/assets/technology/background-technology-desktop.jpg");
     }
 }
 
