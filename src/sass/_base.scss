@@ -21,3 +21,8 @@ body {
     font-weight: 400;
     color: $color-secondary;
 }
+
+#root {
+    min-height: 100vh;
+    overflow-y: hidden;
+}

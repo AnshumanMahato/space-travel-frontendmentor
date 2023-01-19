@@ -1,15 +1,15 @@
 .crew {
     display: grid;
     width: 100%;
+    flex-grow: 1;
     grid-template-columns: [desc-start] min-content [desc-end img-start] min-content[img-end];
-    grid-template-rows: [desc-start] 1fr [desc-end control-start] min-content[control-end];
-    overflow-y: hidden;
+    grid-template-rows: [desc-start] 1fr [desc-end control-start] max-content [control-end];
     gap: 5%;
 
     &__description {
         grid-column: desc-start/desc-end;
         grid-row: desc-start/desc-end;
-        margin: 30% 0 25%;
+        margin: 30% 0 0;
     }
 
     &__image {
@@ -19,6 +19,7 @@
 
         img {
             position: absolute;
+            top: -2rem;
             left: 7.5rem;
         }
     }
@@ -35,6 +36,26 @@
 
     &__about {
         width: 90%;
+    }
+
+    .control {
+        display: flex;
+        align-items: center;
+        margin: 0 0 18%;
+
+        &__btn {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: #fff;
+            margin-right: 2rem;
+            content: '';
+            opacity: 0.2;
+
+            &.active {
+                opacity: 1;
+            }
+        }
     }
 
 }
