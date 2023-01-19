@@ -1,0 +1,40 @@
+.crew {
+    display: grid;
+    width: 100%;
+    grid-template-columns: [desc-start] min-content [desc-end img-start] min-content[img-end];
+    grid-template-rows: [desc-start] 1fr [desc-end control-start] min-content[control-end];
+    overflow-y: hidden;
+    gap: 5%;
+
+    &__description {
+        grid-column: desc-start/desc-end;
+        grid-row: desc-start/desc-end;
+        margin: 30% 0 25%;
+    }
+
+    &__image {
+        grid-column: img-start/img-end;
+        grid-row: desc-start/control-end;
+        position: relative;
+
+        img {
+            position: absolute;
+            left: 7.5rem;
+        }
+    }
+
+    &__role {
+        margin-bottom: 3.5rem;
+        opacity: 0.5;
+    }
+
+    &__name {
+        margin-bottom: 5.5rem;
+        white-space: nowrap;
+    }
+
+    &__about {
+        width: 90%;
+    }
+
+}

@@ -7,6 +7,7 @@ const Destinations = () => {
   let [destination, setDest] = useState("Moon");
 
   const handleClick = (e) => {
+    if (!e.target.classList.contains("destination__navitem")) return;
     const { dest } = e.target.dataset;
     setDest(dest);
   };
@@ -18,13 +19,12 @@ const Destinations = () => {
       </h5>
       <div className="destination">
         <nav className="destination__nav">
-          <ul className="destination__navlist">
+          <ul className="destination__navlist" onClick={handleClick}>
             <li
               className={`destination__navitem ${
                 destination === "Moon" ? "active" : ""
               }`}
               data-dest="Moon"
-              onClick={handleClick}
             >
               MOON
             </li>
@@ -33,7 +33,6 @@ const Destinations = () => {
                 destination === "Mars" ? "active" : ""
               }`}
               data-dest="Mars"
-              onClick={handleClick}
             >
               MARS
             </li>
@@ -42,7 +41,6 @@ const Destinations = () => {
                 destination === "Europa" ? "active" : ""
               }`}
               data-dest="Europa"
-              onClick={handleClick}
             >
               EUROPA
             </li>
@@ -51,7 +49,6 @@ const Destinations = () => {
                 destination === "Titan" ? "active" : ""
               }`}
               data-dest="Titan"
-              onClick={handleClick}
             >
               TITAN
             </li>
