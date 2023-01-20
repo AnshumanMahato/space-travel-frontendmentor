@@ -4,7 +4,7 @@ import CrewImage from "../components/CrewImage";
 import { crew } from "../data";
 
 const Crew = () => {
-  const [currCrew, setCrew] = useState(2);
+  const [currCrew, setCrew] = useState(0);
 
   const handleClick = (e) => {
     if (!e.target.classList.contains("control__btn")) return;
