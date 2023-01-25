@@ -20,16 +20,14 @@
         }
     }
 
-    &__nav {
+    .control {
         grid-row: nav-start/nav-end;
         grid-column: desc-start/desc-end;
+        display: flex;
 
-        &list {
-            list-style: none;
-            display: flex;
-        }
-
-        &item {
+        &__btn {
+            background-color: transparent;
+            color: inherit;
             margin-right: 4rem;
             padding-bottom: 1rem;
             border-bottom: 3px solid transparent;
@@ -64,10 +62,6 @@
             opacity: 1;
         }
     }
-
-    // &__name {
-    //     margin: 4rem 0 6rem;
-    // }
 
     &__data {
         display: flex;
