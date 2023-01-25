@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import DestDescription from "../components/DestDescription";
-import DestImage from "../components/DestImage";
+import DestSlide from "../components/DestSlide";
 import { destinations } from "../data";
 
 const Destinations = () => {
@@ -54,25 +53,8 @@ const Destinations = () => {
             </li>
           </ul>
         </nav>
-
         {destinations.map((dest, key) => (
-          <DestImage
-            key={key}
-            name={dest.name}
-            path={dest.images.webp.slice(1)}
-            active={dest.name === destination}
-          />
-        ))}
-
-        {destinations.map((dest, key) => (
-          <DestDescription
-            key={key}
-            name={dest.name}
-            description={dest.description}
-            distance={dest.distance}
-            travel={dest.travel}
-            active={dest.name === destination}
-          />
+          <DestSlide key={key} dest={dest} active={dest.name === destination} />
         ))}
       </div>
     </main>

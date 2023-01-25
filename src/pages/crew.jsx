@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import CrewDescription from "../components/CrewDescription";
-import CrewImage from "../components/CrewImage";
+import CrewSlide from "../components/CrewSlide";
 import { crew } from "../data";
 
 const Crew = () => {
@@ -20,16 +19,9 @@ const Crew = () => {
 
       <div className="crew">
         {crew.map((crewMember, key) => (
-          <CrewDescription
+          <CrewSlide
             crewMember={crewMember}
             key={key}
-            active={currCrew === key}
-          />
-        ))}
-        {crew.map((crewMember, key) => (
-          <CrewImage
-            key={key}
-            crewMember={crewMember}
             active={currCrew === key}
           />
         ))}

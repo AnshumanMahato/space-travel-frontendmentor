@@ -5,10 +5,8 @@
     height: 90%;
 
     .technology {
-        display: none;
-        opacity: 0;
         align-items: center;
-        justify-content: space-between;
+
         width: 100%;
 
         &__name {
@@ -18,15 +16,28 @@
         &__description {
             width: min-content;
             transition: all 0.2s;
+            display: none;
+            opacity: 0;
+            margin-right: auto;
+
+            &.active {
+                opacity: 1;
+                display: block;
+            }
+        }
+
+        &__image {
+            display: none;
+            opacity: 0;
+
+            &.active {
+                opacity: 1;
+                display: block;
+            }
         }
 
         &__about {
             width: 45rem;
-        }
-
-        &.active {
-            opacity: 1;
-            display: flex;
         }
     }
 
