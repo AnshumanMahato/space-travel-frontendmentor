@@ -4,12 +4,12 @@ import DestSlide from "../components/DestSlide";
 import { destinations } from "../data";
 
 const Destinations = () => {
-  let [currSlide, setDest] = useState("Moon");
+  let [currSlide, setSlide] = useState("Moon");
 
   const handleClick = (e) => {
     if (!e.target.classList.contains("control__btn")) return;
     const { key } = e.target.dataset;
-    setDest(key);
+    setSlide(key);
   };
 
   return (

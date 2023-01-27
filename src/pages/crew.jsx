@@ -4,12 +4,12 @@ import CrewSlide from "../components/CrewSlide";
 import { crew } from "../data";
 
 const Crew = () => {
-  const [currCrew, setCrew] = useState(0);
+  const [currSlide, setSlide] = useState(0);
 
   const handleClick = (e) => {
     if (!e.target.classList.contains("control__btn")) return;
-    const currKey = Number(e.target.dataset.key);
-    setCrew(currKey);
+    const key = Number(e.target.dataset.key);
+    setSlide(key);
   };
 
   return (
@@ -23,10 +23,10 @@ const Crew = () => {
           <CrewSlide
             crewMember={crewMember}
             key={key}
-            active={currCrew === key}
+            active={currSlide === key}
           />
         ))}
-        <CrewControl handleClick={handleClick} currCrew={currCrew} />
+        <CrewControl handleClick={handleClick} currSlide={currSlide} />
       </div>
     </main>
   );
