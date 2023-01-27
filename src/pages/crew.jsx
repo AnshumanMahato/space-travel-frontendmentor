@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CrewControl from "../components/CrewControl";
 import CrewSlide from "../components/CrewSlide";
 import { crew } from "../data";
 
@@ -25,24 +26,7 @@ const Crew = () => {
             active={currCrew === key}
           />
         ))}
-        <div className="control" onClick={handleClick}>
-          <button
-            className={`control__btn ${currCrew === 0 ? "active" : ""}`}
-            data-key="0"
-          ></button>
-          <button
-            className={`control__btn ${currCrew === 1 ? "active" : ""}`}
-            data-key="1"
-          ></button>
-          <button
-            className={`control__btn ${currCrew === 2 ? "active" : ""}`}
-            data-key="2"
-          ></button>
-          <button
-            className={`control__btn ${currCrew === 3 ? "active" : ""}`}
-            data-key="3"
-          ></button>
-        </div>
+        <CrewControl handleClick={handleClick} currCrew={currCrew} />
       </div>
     </main>
   );
