@@ -7,19 +7,19 @@
     background-size: cover;
 
     &-home {
-        background-image: url("../../../public/assets/home/background-home-desktop.jpg");
+        background-image: url("../../public/assets/home/background-home-desktop.jpg");
     }
 
     &-destination {
-        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../../public/assets/destination/background-destination-desktop.jpg");
+        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../public/assets/destination/background-destination-desktop.jpg");
     }
 
     &-crew {
-        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../../public/assets/crew/background-crew-desktop.jpg");
+        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../public/assets/crew/background-crew-desktop.jpg");
     }
 
     &-technology {
-        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../../public/assets/technology/background-technology-desktop.jpg");
+        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../public/assets/technology/background-technology-desktop.jpg");
     }
 }
 
