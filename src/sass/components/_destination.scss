@@ -26,6 +26,11 @@
         display: flex;
 
         &__btn {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 2.7px;
+
             background-color: transparent;
             color: inherit;
             margin-right: 4rem;
