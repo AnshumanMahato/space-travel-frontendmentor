@@ -1,6 +1,6 @@
 .background {
     max-width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
@@ -25,21 +25,22 @@
 
 .home {
     position: relative;
-    height: fit-content;
+    margin: 10%;
+    margin-bottom: clamp(10%, 12%, 15%);
 }
 
 .hero-text {
     width: min-content;
-    position: absolute;
-    top: 23rem;
-    left: 16rem;
+    position: relative;
+    top: 8rem;
+    left: 5rem;
 }
 
 .hero-btn {
     position: absolute;
-    top: 33rem;
-    right: 15rem;
     transform-style: preserve-3d;
+    top: 18rem;
+    right: 5rem;
     display: flex;
     height: 27rem;
     width: 27rem;
