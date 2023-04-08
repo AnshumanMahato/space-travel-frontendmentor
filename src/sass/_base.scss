@@ -1,27 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
 
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
 
-    @media only screen and (max-width: 1300px) {
-        font-size: 50%;
-    }
+  // @media only screen and (max-width: 1300px) {
+  //     font-size: 50%;
+  // }
 }
 
 body {
-    overflow-x: hidden;
-    font-family: 'Barlow', sans-serif;
-    font-size: 1.8rem;
-    line-height: 3rem;
-    font-weight: 400;
-    color: $color-secondary;
+  overflow-x: hidden;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  font-weight: 400;
+  color: $color-secondary;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 1.6rem;
+  }
 }

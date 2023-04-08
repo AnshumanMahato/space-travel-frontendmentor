@@ -7,22 +7,22 @@ const HeaderNav = () => {
       <ul className="nav__list">
         <li className="nav__item">
           <NavLink className="nav__link" to="/">
-            <span>00</span>&nbsp;&nbsp;HOME
+            <span>00&nbsp;&nbsp;</span>HOME
           </NavLink>
         </li>
         <li className="nav__item">
           <NavLink className="nav__link" to="/destination">
-            <span>01</span>&nbsp;&nbsp;DESTINATION
+            <span>01&nbsp;&nbsp;</span>DESTINATION
           </NavLink>
         </li>
         <li className="nav__item">
           <NavLink className="nav__link" to="/crew">
-            <span>02</span>&nbsp;&nbsp;CREW
+            <span>02&nbsp;&nbsp;</span>CREW
           </NavLink>
         </li>
         <li className="nav__item">
           <NavLink className="nav__link" to="/technology">
-            <span>03</span>&nbsp;&nbsp;TECHNOLOGY
+            <span>03&nbsp;&nbsp;</span>TECHNOLOGY
           </NavLink>
         </li>
       </ul>

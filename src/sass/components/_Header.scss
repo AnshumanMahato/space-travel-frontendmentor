@@ -55,6 +55,9 @@ hr {
   &__link {
     span {
       font-weight: bold;
+      @media only screen and (max-width: 900px) {
+        display: none;
+      }
     }
 
     &:link,
