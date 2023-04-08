@@ -1,100 +1,124 @@
 .background {
-    max-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    &-home {
-        background-image: url("../../public/assets/home/background-home-desktop.jpg");
+  &-home {
+    background-image: url("../../public/assets/home/background-home-desktop.jpg");
 
-        @media only screen and (max-width:900px) {
-            background-image: url("../../public/assets/home/background-home-tablet.jpg");
-        }
+    @media only screen and (max-width: 900px) {
+      background-image: url("../../public/assets/home/background-home-tablet.jpg");
     }
+  }
 
-    &-destination {
-        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../public/assets/destination/background-destination-desktop.jpg");
+  &-destination {
+    background-image: linear-gradient(
+        rgba(11, 13, 23, 0.35),
+        rgba(11, 13, 23, 0.35)
+      ),
+      url("../../public/assets/destination/background-destination-desktop.jpg");
 
-        @media only screen and (max-width:900px) {
-            background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../public/assets/destination/background-destination-tablet.jpg");
-        }
+    @media only screen and (max-width: 900px) {
+      background-image: linear-gradient(
+          rgba(11, 13, 23, 0.35),
+          rgba(11, 13, 23, 0.35)
+        ),
+        url("../../public/assets/destination/background-destination-tablet.jpg");
     }
+  }
 
-    &-crew {
-        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../public/assets/crew/background-crew-desktop.jpg");
+  &-crew {
+    background-image: linear-gradient(
+        rgba(11, 13, 23, 0.35),
+        rgba(11, 13, 23, 0.35)
+      ),
+      url("../../public/assets/crew/background-crew-desktop.jpg");
 
-        @media only screen and (max-width:900px) {
-            background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../public/assets/crew/background-crew-tablet.jpg");
-        }
+    @media only screen and (max-width: 900px) {
+      background-image: linear-gradient(
+          rgba(11, 13, 23, 0.35),
+          rgba(11, 13, 23, 0.35)
+        ),
+        url("../../public/assets/crew/background-crew-tablet.jpg");
     }
+  }
 
-    &-technology {
-        background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../public/assets/technology/background-technology-desktop.jpg");
+  &-technology {
+    background-image: linear-gradient(
+        rgba(11, 13, 23, 0.35),
+        rgba(11, 13, 23, 0.35)
+      ),
+      url("../../public/assets/technology/background-technology-desktop.jpg");
 
-        @media only screen and (max-width:900px) {
-            background-image: linear-gradient(rgba(11, 13, 23, 0.35), rgba(11, 13, 23, 0.35)), url("../../public/assets/technology/background-technology-tablet.jpg");
-        }
+    @media only screen and (max-width: 900px) {
+      background-image: linear-gradient(
+          rgba(11, 13, 23, 0.35),
+          rgba(11, 13, 23, 0.35)
+        ),
+        url("../../public/assets/technology/background-technology-tablet.jpg");
     }
+  }
 }
 
 .home {
-    position: relative;
-    margin: 10%;
-    margin-bottom: clamp(10%, 12%, 15%);
+  position: relative;
+  margin: 10%;
+  margin-bottom: clamp(10%, 12%, 15%);
 }
 
 .hero-text {
-    width: min-content;
-    position: relative;
-    top: 8rem;
-    left: 5rem;
+  width: min-content;
+  position: relative;
+  top: 8rem;
+  left: 5rem;
 }
 
 .hero-btn {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 18rem;
+  right: 5rem;
+  display: flex;
+  height: 27rem;
+  width: 27rem;
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  font-family: "Bellefair", serif;
+  font-size: 3.2rem;
+  letter-spacing: 2px;
+  color: $color-black;
+
+  &::after {
     position: absolute;
-    transform-style: preserve-3d;
-    top: 18rem;
-    right: 5rem;
-    display: flex;
-    height: 27rem;
-    width: 27rem;
-    background-color: #fff;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
+    transform: translateZ(-1px);
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: inherit;
+    transition: all 0.3s;
+  }
 
-    text-decoration: none;
-    font-family: 'Bellefair', serif;
-    font-size: 3.2rem;
-    letter-spacing: 2px;
-    color: $color-black;
-
-    &::after {
-        position: absolute;
-        transform: translateZ(-1px);
-        content: '';
-        height: 100%;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: inherit;
-        transition: all .3s;
-    }
-
-    &:hover::after {
-        width: 160%;
-        height: 160%;
-    }
+  &:hover::after {
+    width: 160%;
+    height: 160%;
+  }
 }
 
 .page {
-    margin: 2% 0 0 12%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+  margin: 2% 0 0 12%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 
-    @media only screen and (max-width:1050px) {
-        margin: 2% 0 0 10%;
-    }
+  @media only screen and (max-width: 1050px) {
+    margin: 2% 0 0 10%;
+  }
 }
