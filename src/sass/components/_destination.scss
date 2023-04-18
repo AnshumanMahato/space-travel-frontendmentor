@@ -6,6 +6,13 @@
   grid-template-rows: [nav-start] auto [nav-end desc-start] 1fr [desc-end];
   gap: 5rem 0;
 
+  @media only screen and (max-width: 900px) {
+    margin-top: 6rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: [image-start] min-content [image-end nav-start] auto [nav-end desc-start] 1fr [desc-end];
+    text-align: center;
+  }
+
   &__img {
     grid-row: nav-start/desc-end;
     grid-column: image-start/image-end;
@@ -14,6 +21,16 @@
     align-items: center;
     opacity: 0;
     transition: opacity 0.2s;
+
+    @media only screen and (max-width: 900px) {
+      grid-row: image-start/image-end;
+      justify-content: center;
+
+      & > img {
+        width: 30rem;
+        height: 30rem;
+      }
+    }
 
     &.active {
       opacity: 1;
@@ -25,6 +42,10 @@
     grid-column: desc-start/desc-end;
     display: flex;
 
+    @media only screen and (max-width: 900px) {
+      justify-content: center;
+    }
+
     &__btn {
       font-family: "Barlow Condensed", sans-serif;
       font-size: 1.6rem;
@@ -33,12 +54,15 @@
 
       background-color: transparent;
       color: inherit;
-      margin-right: 4rem;
       padding-bottom: 1rem;
       border: none;
       border-bottom: 3px solid transparent;
       transition: all 0.3s;
       cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
 
       &:hover {
         border-bottom: 3px solid rgba(255, 255, 255, 0.4);
@@ -62,6 +86,9 @@
 
     & > * {
       margin: 3rem 0;
+      @media only screen and (max-width: 900px) {
+        margin: 1.5rem 0;
+      }
     }
 
     &.active {
@@ -73,6 +100,11 @@
     display: flex;
     border-top: 1px solid rgba(255, 255, 255, 0.25);
     padding: 2rem 0;
+
+    @media only screen and (max-width: 900px) {
+      justify-content: center;
+      margin-top: 3.5rem;
+    }
 
     div {
       display: flex;
