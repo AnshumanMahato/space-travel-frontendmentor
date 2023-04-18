@@ -5,6 +5,9 @@ const DestSlide = (props) => {
 
   return (
     <>
+      <div className={`destination__img ${props.active ? "active" : ""}`}>
+        <img src={images.webp.slice(1)} alt={name} />
+      </div>
       <div
         className={`destination__description ${props.active ? "active" : ""}`}
       >
@@ -20,9 +23,6 @@ const DestSlide = (props) => {
             <span className="subheading-1">{travel}</span>
           </div>
         </div>
-      </div>
-      <div className={`destination__img ${props.active ? "active" : ""}`}>
-        <img src={images.webp.slice(1)} alt={name} />
       </div>
     </>
   );
