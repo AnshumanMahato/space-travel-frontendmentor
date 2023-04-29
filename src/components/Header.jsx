@@ -9,6 +9,10 @@ const Header = (props) => {
       </div>
       <hr />
       <HeaderNav />
+      <input class="nav__checkbox" id="nav-toggle" type="checkbox" />
+      <label class="nav__button" for="nav-toggle">
+        <span class="nav__icon">&nbsp;</span>
+      </label>
     </header>
   );
 };
