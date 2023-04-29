@@ -6,13 +6,6 @@
   grid-template-rows: [nav-start] auto [nav-end desc-start] 1fr [desc-end];
   gap: 5rem 0;
 
-  @media only screen and (max-width: 900px) {
-    margin-top: 6rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: [image-start] min-content [image-end nav-start] auto [nav-end desc-start] 1fr [desc-end];
-    text-align: center;
-  }
-
   &__img {
     grid-row: nav-start/desc-end;
     grid-column: image-start/image-end;
@@ -118,6 +111,18 @@
 
     .subheading-2 {
       margin-bottom: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    width: 77%;
+    margin: 6rem 0 5% 8.5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: [image-start] min-content [image-end nav-start] auto [nav-end desc-start] 1fr [desc-end];
+    text-align: center;
+
+    &__about {
+      margin-top: 2rem;
     }
   }
 }
