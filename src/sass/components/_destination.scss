@@ -118,7 +118,7 @@
     width: 77%;
     margin: 6rem 0 5% 8.5%;
     grid-template-columns: 1fr;
-    grid-template-rows: [image-start] min-content [image-end nav-start] auto [nav-end desc-start] 1fr [desc-end];
+    grid-template-rows: [image-start] min-content [image-end nav-start] min-content [nav-end desc-start] 1fr [desc-end];
     text-align: center;
 
     &__about {
