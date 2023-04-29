@@ -1,83 +1,119 @@
 .crew {
-    display: grid;
+  display: grid;
+  width: 100%;
+  flex-grow: 1;
+  grid-template-columns: [desc-start] minmax(min-content, 1fr) [desc-end img-start] 1fr[img-end];
+  grid-template-rows: [desc-start] max-content [desc-end control-start] auto [control-end];
+
+  &__description {
+    grid-column: desc-start/desc-end;
+    grid-row: desc-start/desc-end;
+    margin: 15rem 0 0;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.2s;
+
+    &.active {
+      opacity: 1;
+      display: block;
+    }
+
+    @media only screen and (max-width: 900px) {
+      grid-row: desc-start/desc-end;
+      margin: 6rem 0 0;
+    }
+  }
+
+  &__image {
+    grid-column: img-start/img-end;
+    grid-row: desc-start/control-end;
+    position: relative;
     width: 100%;
-    flex-grow: 1;
-    grid-template-columns: [desc-start] minmax(min-content, 1fr) [desc-end img-start] 1fr[img-end];
-    grid-template-rows: [desc-start] max-content [desc-end control-start] auto [control-end];
-    // gap: 0 5%;
+    height: 100%;
+    transition: opacity 0.2s;
+    opacity: 0;
 
-    &__description {
-        grid-column: desc-start/desc-end;
-        grid-row: desc-start/desc-end;
-        margin: 15rem 0 0;
-        opacity: 0;
-        display: none;
-        transition: opacity 0.2s;
-
-        &.active {
-            opacity: 1;
-            display: block;
-        }
+    &.active {
+      opacity: 1;
     }
 
-    &__image {
-        grid-column: img-start/img-end;
-        grid-row: desc-start/control-end;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: opacity 0.2s;
-        opacity: 0;
-
-        &.active {
-            opacity: 1;
-        }
-
-        img {
-            position: absolute;
-            bottom: 0;
-            height: 100%;
-        }
+    img {
+      position: absolute;
+      bottom: 0;
+      height: 100%;
     }
 
-    &__role {
-        margin-bottom: 3.5rem;
+    @media only screen and (max-width: 900px) {
+      grid-row: img-start/img-end;
+
+      img {
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__role {
+    margin-bottom: 3.5rem;
+    opacity: 0.5;
+    @media only screen and (max-width: 900px) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__name {
+    margin-bottom: 5.5rem;
+    white-space: nowrap;
+    @media only screen and (max-width: 900px) {
+      margin-bottom: 2.2rem;
+    }
+  }
+
+  &__about {
+    width: 45rem;
+
+    @media only screen and (max-width: 900px) {
+      margin: 0 auto;
+    }
+  }
+
+  .control {
+    display: flex;
+    align-items: center;
+    margin: 10rem 0;
+
+    &__btn {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: #fff;
+      margin-right: 2rem;
+      cursor: pointer;
+      content: "";
+      opacity: 0.2;
+      transition: opacity 0.2s;
+
+      &:hover {
         opacity: 0.5;
+      }
+
+      &.active {
+        opacity: 1;
+      }
     }
-
-    &__name {
-        margin-bottom: 5.5rem;
-        white-space: nowrap;
+    @media only screen and (max-width: 900px) {
+      grid-row: control-start/control-end;
+      justify-content: center;
+      margin: 4rem 0;
     }
+  }
 
-    &__about {
-        width: 45rem;
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: [desc-start] min-content [desc-end control-start] min-content [control-end img-start] 1fr;
+    text-align: center;
+
+    & > * {
+      grid-column: 1/-1;
     }
-
-    .control {
-        display: flex;
-        align-items: center;
-        margin: 10rem 0;
-
-        &__btn {
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            background-color: #fff;
-            margin-right: 2rem;
-            cursor: pointer;
-            content: '';
-            opacity: 0.2;
-            transition: opacity 0.2s;
-
-            &:hover {
-                opacity: 0.5;
-            }
-
-            &.active {
-                opacity: 1;
-            }
-        }
-    }
-
+  }
 }
