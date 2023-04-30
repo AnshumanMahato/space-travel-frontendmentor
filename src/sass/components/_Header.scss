@@ -38,10 +38,19 @@ hr {
     padding: 0 5rem;
   }
 
+  @media only screen and (max-width: 600px) {
+    padding: 12rem 3rem;
+  }
+
   &__list {
     list-style: none;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -56,6 +65,9 @@ hr {
         margin-right: 0;
       }
     }
+    @media only screen and (max-width: 600px) {
+      margin: 1.5rem 0;
+    }
   }
 
   &__link {
@@ -63,6 +75,9 @@ hr {
       font-weight: bold;
       @media only screen and (max-width: 900px) {
         display: none;
+      }
+      @media only screen and (max-width: 600px) {
+        display: inline;
       }
     }
 
@@ -75,14 +90,24 @@ hr {
       padding: 4rem 0;
       border-bottom: 3px solid transparent;
       transition: all 0.2s;
+      @media only screen and (max-width: 600px) {
+        padding: 0;
+        border: 0;
+      }
     }
 
     &:hover {
       border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+      @media only screen and (max-width: 600px) {
+        border: 0;
+      }
     }
 
     &.active {
       border-bottom: 3px solid rgba(255, 255, 255);
+      @media only screen and (max-width: 600px) {
+        border: 0;
+      }
     }
   }
 
@@ -95,6 +120,8 @@ hr {
   }
 
   &__button {
+    height: 2.5rem;
+    width: 2.5rem;
     position: relative;
     display: none;
     border-radius: 50%;
@@ -161,8 +188,19 @@ hr {
     }
   }
 
+  &__checkbox:checked ~ & {
+    transform: translateX(0);
+  }
+
   @media only screen and (max-width: 600px) {
-    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 68vw;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: all 0.2s;
   }
 }
 
