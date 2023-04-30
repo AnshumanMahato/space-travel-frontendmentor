@@ -13,7 +13,7 @@ const Home = () => {
           experience!
         </p>
       </div>
-      <a href="/" className="hero-btn">
+      <a href="/destination" className="hero-btn">
         EXPLORE
       </a>
     </main>

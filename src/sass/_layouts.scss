@@ -98,6 +98,11 @@
     align-items: center;
     height: 73vh;
   }
+  @media only screen and (max-width: 600px) {
+    margin: 2.5rem;
+    justify-content: center;
+    flex-grow: 1;
+  }
 }
 
 .hero-text {
@@ -109,6 +114,10 @@
     top: 0;
     left: 0;
     text-align: center;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 7rem;
   }
 }
 
@@ -130,13 +139,6 @@
   font-size: 3.2rem;
   letter-spacing: 2px;
   color: $color-black;
-  @media only screen and (max-width: 900px) {
-    position: relative;
-    top: 0;
-    right: 0;
-    height: 24rem;
-    width: 24rem;
-  }
 
   &::after {
     position: absolute;
@@ -152,6 +154,25 @@
   &:hover::after {
     width: 160%;
     height: 160%;
+  }
+
+  @media only screen and (max-width: 900px) {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 24rem;
+    width: 24rem;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    height: 15rem;
+    width: 15rem;
+    font-size: 2rem;
+    letter-spacing: 1.25px;
   }
 }
 
