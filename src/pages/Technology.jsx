@@ -1,10 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import TechControl from "../components/TechControl";
 import TechSlide from "../components/TechSlide";
 import { technology } from "../data";
 
 const Technology = () => {
   const [currSlide, setSlide] = useState(0);
+
+  const timeoutRef = useRef(null);
+
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () => setSlide((currSlide + 1) % technology.length),
+      5000
+    );
+
+    return () => {};
+  }, [currSlide]);
 
   const handleClick = (e) => {
     if (!e.target.classList.contains("control__btn")) return;

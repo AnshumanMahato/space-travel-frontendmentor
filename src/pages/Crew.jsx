@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import CrewControl from "../components/CrewControl";
 import CrewSlide from "../components/CrewSlide";
 import { crew } from "../data";
@@ -6,7 +6,7 @@ import { crew } from "../data";
 const Crew = () => {
   const [currSlide, setSlide] = useState(0);
 
-  const timeoutRef = React.useRef(null);
+  const timeoutRef = useRef(null);
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -14,9 +14,12 @@ const Crew = () => {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     resetTimeout();
-    timeoutRef.current = setTimeout(() => setSlide((currSlide + 1) % 4), 3000);
+    timeoutRef.current = setTimeout(
+      () => setSlide((currSlide + 1) % crew.length),
+      5000
+    );
 
     return () => {};
   }, [currSlide]);
