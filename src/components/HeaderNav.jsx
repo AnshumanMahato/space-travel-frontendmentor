@@ -1,10 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const HeaderNav = () => {
+const HeaderNav = ({ onNavigation }) => {
+  const handleClick = (e) => {
+    if (e.target.classList.contains("nav__link")) onNavigation();
+  };
+
   return (
     <nav className="nav">
-      <ul className="nav__list">
+      <ul className="nav__list" onClick={handleClick}>
         <li className="nav__item">
           <NavLink className="nav__link" to="/">
             <span>00&nbsp;&nbsp;</span>HOME
