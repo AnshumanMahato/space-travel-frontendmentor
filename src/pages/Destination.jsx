@@ -4,12 +4,12 @@ import DestSlide from "../components/DestSlide";
 import { destinations } from "../data";
 
 const Destinations = () => {
-  let [currSlide, setSlide] = useState("Moon");
+  let [currSlide, setSlide] = useState(0);
 
   const handleClick = (e) => {
     if (!e.target.classList.contains("control__btn")) return;
     const { key } = e.target.dataset;
-    setSlide(key);
+    setSlide(Number(key));
   };
 
   return (
@@ -20,7 +20,7 @@ const Destinations = () => {
       <div className="destination">
         <DestControl handleClick={handleClick} currSlide={currSlide} />
         {destinations.map((dest, key) => (
-          <DestSlide key={key} dest={dest} active={dest.name === currSlide} />
+          <DestSlide key={key} dest={dest} active={key === currSlide} />
         ))}
       </div>
     </main>

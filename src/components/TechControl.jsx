@@ -5,12 +5,12 @@ const TechControl = (props) => {
   const { handleClick, currSlide } = props;
   return (
     <div className="control" onClick={handleClick}>
-      {[1, 2, 3].map((key) => (
+      {[0, 1, 2].map((key) => (
         <ControlBtn
           key={key}
           id={key}
           active={currSlide === key}
-          content={key}
+          content={key + 1}
         />
       ))}
     </div>

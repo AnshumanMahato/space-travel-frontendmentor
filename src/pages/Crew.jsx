@@ -6,6 +6,21 @@ import { crew } from "../data";
 const Crew = () => {
   const [currSlide, setSlide] = useState(0);
 
+  const timeoutRef = React.useRef(null);
+
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
+
+  React.useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(() => setSlide((currSlide + 1) % 4), 3000);
+
+    return () => {};
+  }, [currSlide]);
+
   const handleClick = (e) => {
     if (!e.target.classList.contains("control__btn")) return;
     const key = Number(e.target.dataset.key);

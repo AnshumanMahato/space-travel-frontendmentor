@@ -4,7 +4,7 @@ import TechSlide from "../components/TechSlide";
 import { technology } from "../data";
 
 const Technology = () => {
-  const [currSlide, setSlide] = useState(1);
+  const [currSlide, setSlide] = useState(0);
 
   const handleClick = (e) => {
     if (!e.target.classList.contains("control__btn")) return;
@@ -18,8 +18,8 @@ const Technology = () => {
       </h5>
       <div className="technology-slides">
         <TechControl handleClick={handleClick} currSlide={currSlide} />
-        {technology.map((tech, i) => (
-          <TechSlide tech={tech} key={i + 1} active={currSlide === i + 1} />
+        {technology.map((tech, key) => (
+          <TechSlide tech={tech} key={key} active={currSlide === key} />
         ))}
       </div>
     </main>
