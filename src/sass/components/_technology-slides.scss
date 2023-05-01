@@ -58,6 +58,7 @@
 
       @media only screen and (max-width: $width-tab) {
         order: 1;
+        width: 100vw;
       }
     }
 
@@ -130,6 +131,6 @@
     margin: 5.5rem 0 9rem;
   }
   @media only screen and (max-width: $width-mob) {
-    margin: 3rem 0 8rem;
+    margin: auto 0;
   }
 }

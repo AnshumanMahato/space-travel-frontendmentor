@@ -1,6 +1,10 @@
 import React from "react";
 
 const TechSlide = (props) => {
+  let src = props.tech.images.portrait;
+  if (window.matchMedia("(max-width:1024px)").matches)
+    src = props.tech.images.landscape;
+
   return (
     <>
       <div
@@ -11,7 +15,7 @@ const TechSlide = (props) => {
         <p className="technology__about">{props.tech.description}</p>
       </div>
       <div className={`technology__image ${props.active ? "active" : ""}`}>
-        <img src={props.tech.images.portrait} alt="test" />
+        <img src={src} alt="test" />
       </div>
     </>
   );
