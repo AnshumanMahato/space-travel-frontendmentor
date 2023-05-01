@@ -18,7 +18,7 @@
     &.active {
       opacity: 1;
     }
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: $width-tab) {
       grid-row: image-start/image-end;
       justify-content: center;
 
@@ -27,7 +27,7 @@
         height: 30rem;
       }
     }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $width-mob) {
       & > img {
         width: 17rem;
         height: 17rem;
@@ -40,7 +40,7 @@
     grid-column: desc-start/desc-end;
     display: flex;
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: $width-tab) {
       justify-content: center;
     }
 
@@ -60,7 +60,7 @@
 
       &:not(:last-child) {
         margin-right: 4rem;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: $width-mob) {
           margin-right: 2.5rem;
         }
       }
@@ -87,7 +87,7 @@
 
     & > * {
       margin: 3rem 0;
-      @media only screen and (max-width: 900px) {
+      @media only screen and (max-width: $width-tab) {
         margin: 1.5rem 0;
       }
     }
@@ -103,12 +103,12 @@
     padding: 2rem 0;
     flex-wrap: wrap;
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: $width-tab) {
       justify-content: center;
       margin-top: 3.5rem;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $width-mob) {
       margin-top: 1.5rem;
     }
 
@@ -120,7 +120,7 @@
       &:not(:last-child) {
         padding-right: 8rem;
       }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: $width-mob) {
         width: 100%;
         justify-content: center;
         &:not(:last-child) {
@@ -135,7 +135,7 @@
     }
   }
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: $width-tab) {
     width: 77%;
     margin: 6rem auto 5%;
     grid-template-columns: 1fr;
@@ -146,7 +146,7 @@
       margin-top: 2rem;
     }
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: $width-mob) {
     width: 100%;
     margin: 3rem auto;
 

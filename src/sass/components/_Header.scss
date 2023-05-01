@@ -8,11 +8,11 @@ header {
 
 .logo {
   margin: 6rem;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: $width-tab) {
     margin: 2.5rem 4rem;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: $width-mob) {
     margin: 2.5rem;
     height: 4rem;
     width: 4rem;
@@ -24,7 +24,7 @@ hr {
   margin-right: -3rem;
   z-index: 1;
   opacity: 0.3;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: $width-tab) {
     display: none;
   }
 }
@@ -34,11 +34,11 @@ hr {
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40px);
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: $width-tab) {
     padding: 0 5rem;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: $width-mob) {
     padding: 12rem 0;
   }
 
@@ -47,7 +47,7 @@ hr {
     display: flex;
     justify-content: space-between;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $width-mob) {
       flex-direction: column;
       justify-content: center;
       align-items: stretch;
@@ -60,13 +60,13 @@ hr {
     &:last-child {
       margin-right: 2rem;
     }
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: $width-tab) {
       margin-right: 3.5rem;
       &:last-child {
         margin-right: 0;
       }
     }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $width-mob) {
       margin: 0 0 2rem 3rem;
     }
   }
@@ -74,10 +74,10 @@ hr {
   &__link {
     span {
       font-weight: bold;
-      @media only screen and (max-width: 900px) {
+      @media only screen and (max-width: $width-tab) {
         display: none;
       }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: $width-mob) {
         display: inline;
       }
     }
@@ -91,7 +91,7 @@ hr {
       padding: 4rem 0;
       border-bottom: 3px solid transparent;
       transition: all 0.2s;
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: $width-mob) {
         width: 100%;
         padding: 0.5rem 0;
         border: 0;
@@ -100,14 +100,14 @@ hr {
 
     &:hover {
       border-bottom: 3px solid rgba(255, 255, 255, 0.4);
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: $width-mob) {
         border: 0;
       }
     }
 
     &.active {
       border-bottom: 3px solid rgba(255, 255, 255);
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: $width-mob) {
         border: 0;
         border-right: 4px solid rgba(255, 255, 255);
       }
@@ -133,7 +133,7 @@ hr {
     text-align: center;
     box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $width-mob) {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -195,7 +195,7 @@ hr {
     transform: translateX(0);
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: $width-mob) {
     position: absolute;
     height: 100vh;
     width: 68vw;

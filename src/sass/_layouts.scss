@@ -9,10 +9,10 @@
   &-home {
     background-image: url("../../public/assets/home/background-home-desktop.jpg");
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: $width-tab) {
       background-image: url("../../public/assets/home/background-home-tablet.jpg");
     }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $width-mob) {
       background-image: url("../../public/assets/home/background-home-mobile.jpg");
     }
   }
@@ -24,14 +24,14 @@
       ),
       url("../../public/assets/destination/background-destination-desktop.jpg");
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: $width-tab) {
       background-image: linear-gradient(
           rgba(11, 13, 23, 0.35),
           rgba(11, 13, 23, 0.35)
         ),
         url("../../public/assets/destination/background-destination-tablet.jpg");
     }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $width-mob) {
       background-image: linear-gradient(
           rgba(11, 13, 23, 0.35),
           rgba(11, 13, 23, 0.35)
@@ -47,14 +47,14 @@
       ),
       url("../../public/assets/crew/background-crew-desktop.jpg");
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: $width-tab) {
       background-image: linear-gradient(
           rgba(11, 13, 23, 0.35),
           rgba(11, 13, 23, 0.35)
         ),
         url("../../public/assets/crew/background-crew-tablet.jpg");
     }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $width-mob) {
       background-image: linear-gradient(
           rgba(11, 13, 23, 0.35),
           rgba(11, 13, 23, 0.35)
@@ -70,14 +70,14 @@
       ),
       url("../../public/assets/technology/background-technology-desktop.jpg");
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: $width-tab) {
       background-image: linear-gradient(
           rgba(11, 13, 23, 0.35),
           rgba(11, 13, 23, 0.35)
         ),
         url("../../public/assets/technology/background-technology-tablet.jpg");
     }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $width-mob) {
       background-image: linear-gradient(
           rgba(11, 13, 23, 0.35),
           rgba(11, 13, 23, 0.35)
@@ -91,14 +91,14 @@
   position: relative;
   margin: 10%;
   margin-bottom: clamp(10%, 12%, 15%);
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: $width-tab) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 73vh;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: $width-mob) {
     margin: 2.5rem;
     justify-content: center;
     flex-grow: 1;
@@ -110,12 +110,12 @@
   position: relative;
   top: 8rem;
   left: 5rem;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: $width-tab) {
     top: 0;
     left: 0;
     text-align: center;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: $width-mob) {
     width: 100%;
     margin-bottom: 7rem;
   }
@@ -156,7 +156,7 @@
     height: 150%;
   }
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: $width-tab) {
     position: relative;
     top: 0;
     right: 0;
@@ -168,7 +168,7 @@
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: $width-mob) {
     height: 15rem;
     width: 15rem;
     font-size: 2rem;
@@ -185,10 +185,10 @@
   @media only screen and (max-width: 1050px) {
     margin: 2% 0 0 10%;
   }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: $width-tab) {
     margin: 2% 5% 0;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: $width-mob) {
     text-align: center;
     margin: 0 2.5rem;
   }
